@@ -1,0 +1,159 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-10T03:38:47.926Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10172256600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Create new Opportunity",
+        "description": "",
+        "id": "user-in-crm-module;create-new-opportunity",
+        "after": [
+          {
+            "result": {
+              "duration": 737893799,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3300947500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1985130699,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user logs in as sales manager",
+            "match": {
+              "location": "LoginStepDefinitions.user_logs_in_as_sales_manager()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3816753601,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user navigates to \"CRM\" module",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_module(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9287400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user verifies that \"Pipeline - Odoo\" page title is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pipeline - Odoo\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginStepDefinitions.user_verifies_that_page_title_is_displayed(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2162223700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user click on \"Create\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create\"",
+                  "offset": 14
+                }
+              ],
+              "location": "CRMStepDefinitions.user_click_on_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4645600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user adds new information:",
+            "match": {
+              "location": "CRMStepDefinitions.user_adds_new_information(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Opportunity Title",
+                  "Customer",
+                  "Expected Revenue",
+                  "Priority"
+                ]
+              },
+              {
+                "cells": [
+                  "Iphone cases",
+                  "John Snow",
+                  "15.00",
+                  "***"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CRMmodule"
+          }
+        ]
+      }
+    ],
+    "name": "User in CRM module",
+    "description": "",
+    "id": "user-in-crm-module",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/CRM.feature",
+    "tags": []
+  }
+]
